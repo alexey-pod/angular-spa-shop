@@ -25,4 +25,4 @@
 - Форматирование чисел сделано с помощью `filter`
 - На случай неверного ввода адреса сделан перехват 404 ошибки
 - Для сохранения данных в localstorage - использована внешняя библиотека [angular-local-storage](https://github.com/grevory/angular-local-storage)
-
+- Итоговый проект доступен по адресу: [angular-shop.likeuse.ru](http://angular-shop.likeuse.ru/)
