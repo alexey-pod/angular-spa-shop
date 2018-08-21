@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" ng-app="app" ng-controller="main_ctrl">
+<head>
+	<meta charset="UTF-8">
+	<title ng-bind-template="{{ page.title() }}"></title>
+	<script src="/js/angular.min.js"></script>
+	<script src="/js/angular-route.min.js"></script>
+	<script src="/js/angular-local-storage.js"></script>
+	<script src="/js/fn.js"></script>
+	<script src="/app/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/main.css"> 
+</head>
+<body >
+	<base href="/">
+	<div class="body-wrap-all">
+		<div class="body-wrap">
+			<div class="top_search_container hide"></div>
+			<div class="top_menu_container">
+				<ul class="top_menu">
+					<li class="top_menu_item" ng-class="{selected: page.id()=='index'}">
+						<a href="/">Главная</a>
+					</li>
+					<li class="top_menu_item" ng-class="{selected: page.id()=='basket'}">
+						<a href="/basket/">Корзина</a>
+					</li>
+				</ul>
+			</div>
+			<div class="hr hide">&nbsp;</div>
+			<div class="page_container" id="page_container">
+				<div class="inner">
+					<div class="center_block no_side_block" >
+						<div class="page_content" id="">
+							<ng-view></ng-view>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rasporka"></div>
+		</div>
+		<div class="footer">
+			<div class="inner">
+				<div class="container">
+					<div class="text">&copy;CMS Shop</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

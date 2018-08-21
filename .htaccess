@@ -1,0 +1,20 @@
+AddDefaultCharset utf-8
+Options All -ExecCGI -Indexes -Includes +FollowSymLinks
+
+RewriteEngine On  
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !index
+RewriteRule (.*) index.html [L] 
+
+#редирект домена с WWW на домен без WWW
+RewriteCond %{HTTP_HOST} ^www.angular-shop.ru$ [NC]
+RewriteRule ^(.*)$ http://angular-shop.ru/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.angular-shop.likeuse.ru$ [NC]
+RewriteRule ^(.*)$ http://angular-shop.likeuse.ru/$1 [R=301,L]
+
+
+
+
+
